@@ -2,7 +2,7 @@ name: Dependent Workflow
 
 on:
   workflow_run:
-    workflows: ["workflow-alpha"]
+    workflows: ["Main Workflow"]
     types:
       - completed
 
