@@ -1,0 +1,14 @@
+name: Dependent Workflow
+
+on:
+  workflow_run:
+    workflows: ["workflow-alpha"]
+    types:
+      - completed
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify
+        run: echo "The main workflow has completed!"
