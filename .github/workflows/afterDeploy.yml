@@ -1,0 +1,14 @@
+name: After Deployment to GitHub Pages
+
+on:
+  deployment:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
